@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-custom-input',
@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CustomInputComponent implements OnInit {
 
-  @Input id:
+  @Input() customImput: any;
+  @Output() value: any
 
-  // [id]="item.fieldId" [placeholder]="item.label" [type]="item.type" [maxLength]="item.maxLength" [minLength]="item.minLength" [required]="item.required"
-
+  // value: string;
   constructor() { }
 
   ngOnInit(): void {

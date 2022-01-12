@@ -3,15 +3,21 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class JsonService {
-    data: any;
-    constructor(private httpClient: HttpClient){
-    }
+  constructor(private httpClient: HttpClient) {
+  }
 
-    getData(){
-        
-        return this.httpClient.get("./assets/metadata.json");
-    }
+  getCustomInput() {
+    return this.httpClient.get("./assets/metadata.json");
+  }
+
+  getFormData() {
+    return this.httpClient.get("./assets/formdata.json");
+  }
+
+  patchFormData(){
+    return this.httpClient.patch("./assets/formdata.json",{firstName:"Alejandro"});
+  }
 }

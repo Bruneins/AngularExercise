@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomInputComponent } from './shared/custom-input/custom-input.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,11 +13,12 @@ import { CustomInputComponent } from './shared/custom-input/custom-input.compone
     AppComponent,
     CustomInputComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
