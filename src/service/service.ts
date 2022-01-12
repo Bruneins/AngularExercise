@@ -17,7 +17,7 @@ export class JsonService {
     return this.httpClient.get("./assets/formdata.json");
   }
 
-  patchFormData(){
-    return this.httpClient.patch("./assets/formdata.json",{firstName:"Alejandro"});
+  patchFormData(person: any){
+    return this.httpClient.patch(" http://localhost:3000/person/1",person);
   }
 }

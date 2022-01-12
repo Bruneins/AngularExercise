@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-custom-input',
@@ -7,8 +7,9 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 })
 export class CustomInputComponent implements OnInit {
 
-  @Input() customImput: any;
-  @Output() value: any
+  @Input() customInput: any;
+  @Input() value: any;
+  @Output() valChange = new EventEmitter<{value: string, fieldId:string}>();
 
   // value: string;
   constructor() { }
@@ -16,4 +17,7 @@ export class CustomInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onChange(val: any) {
+    this.valChange.emit({value :val, fieldId :this.customInput.fieldId});
+  }
 }

@@ -1,5 +1,5 @@
-<li *ngFor="let customImput of customImputList">
-  <app-custom-input [customImput]="customImput"></app-custom-input>
+<li *ngFor="let customInput of customInputList">
+  <app-custom-input *ngIf="person" (valChange)="valChange($event)" [value]="person[customInput.fieldId]" [customInput]="customInput"></app-custom-input>
 </li>
 
-<button>Save</button>
+<button (click)="Save()">Save</button>

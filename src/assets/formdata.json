@@ -1,5 +1,10 @@
 {
-  "firstName": "David",
-  "lastName": "Ruano",
-  "birthDate": "29/12/1993"
+  "person": [
+    {
+      "id": 1,
+      "firstName": "David",
+      "lastName": "Ruano",
+      "birthDate": "1993-12-29"
+    }
+  ]
 }
