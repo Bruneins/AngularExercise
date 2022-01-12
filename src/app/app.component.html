@@ -1,0 +1,4 @@
+<li *ngFor="let item of data">
+  <app-custom-input [id]="item.fieldId" [placeholder]="item.label" [type]="item.type" [maxLength]="item.maxLength" [minLength]="item.minLength" [required]="item.required"></app-custom-input>
+  <input [id]="item.fieldId" [placeholder]="item.label" [type]="item.type" [maxLength]="item.maxLength" [minLength]="item.minLength" [required]="item.required" >
+</li>

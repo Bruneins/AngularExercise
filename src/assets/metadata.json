@@ -1,0 +1,24 @@
+[
+    {
+        "fieldId": "firstName",
+        "type": "text",
+        "label": "First Name",
+        "required": true,
+        "minLength": 1,
+        "maxLength": 20
+    },
+    {
+        "fieldId": "lastName",
+        "type": "text",
+        "label": "Last Name",
+        "required": true,
+        "minLength": 1,
+        "maxLength": 20
+    },
+    {
+        "fieldId": "birthDate",
+        "type": "date",
+        "label": "Birth Date",
+        "required": true
+    }
+]
